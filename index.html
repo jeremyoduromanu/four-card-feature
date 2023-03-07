@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      color: hsl(234, 12%, 34%);
+    }
+
+    .description {
+      color: hsl(229, 6%, 66%);
+      font-size: 1.5rem;
+    }
+
+    .svg {
+      width: 5rem;
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+    }
+
+
+
+    main {
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin: 3rem 0;
+      max-width: 45rem;
+    }
+
+    header .slogan {
+      font-weight: 200;
+      font-size: 2rem;
+    }
+
+    header .title {
+      margin-bottom: 1rem;
+      color: hsl(234, 12%, 34%);
+    }
+
+    header .about-statement p {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: hsl(229, 6%, 66%);
+    }
+
+    .box {
+      margin-bottom: 2rem;
+      min-height: 18rem;
+      padding: 1.5rem 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 0.6rem 5px .2rem hsl(230, 8%, 85%);
+      position: relative;
+      max-width: 40rem;
+
+    }
+
+    .supervisor {
+      border-top: 4px solid hsl(180, 62%, 55%);
+    }
+
+    .supervisor>.title>h1 {
+      margin-bottom: 1rem;
+    }
+
+    .team-builder {
+      border-top: 4px solid hsl(0, 78%, 62%);
+
+    }
+
+    .karma {
+      border-top: 4px solid hsl(34, 97%, 64%);
+    }
+
+    .calculator {
+      border-top: 4px solid hsl(212, 86%, 64%);
+    }
+
+    @media only screen and (min-width: 800px) {
+      #section {
+        max-width: 80rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 8rem 8rem 8rem 8rem;
+      }
+
+      .team-builder {
+        grid-row: span 2;
+      }
+
+      .supervisor {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      .karma {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+
+      .calculator {
+        grid-column-start: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+    }
+
+    @media only screen and (min-width: 1300px) {
+      #section {
+        min-width: 100rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1 class="slogan">Reliable, efficient delivery</h1>
+      <h1 class="title">Powered by Technology</h1>
+      <div class="about-statement">
+        <p>Our Artificial Intelligence powered tools use millions of project data points
+          to ensure that your project is successful</p>
+      </div>
+    </header>
+
+    <section id="section">
+      <div class="supervisor box">
+        <div class="title">
+          <h1>Supervisor</h1>
+        </div>
+        <div class="description">
+          <p>Monitors activity to identify project roadblocks</p>
+        </div>
+        <img src="./images/icon-supervisor.svg" alt="magnifying glass" class="svg">
+      </div>
+      <div class="team-builder box">
+        <div class="title">
+          <h1>Team Builder</h1>
+        </div>
+        <div class="description">
+          <p>Scans our talent network to create the optimal team for your project</p>
+        </div>
+        <img src="./images/icon-team-builder.svg" alt="Team Builder" class="svg">
+      </div>
+      <div class="karma box">
+        <div class="title">
+          <h1>Karma</h1>
+        </div>
+        <div class="description">
+          <p>Regularlyevaluates our talent to ensure quality</p>
+        </div>
+        <img src="./images/icon-karma.svg" alt="" class="svg">
+      </div>
+      <div class="calculator box">
+        <div class="title">
+          <h1>Calculator</h1>
+        </div>
+        <div class="description">
+          <p>Uses data from past projects to provide better delivery estimates</p>
+        </div>
+        <img src="./images/icon-calculator.svg" alt="calculator" class="svg">
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
